@@ -1,24 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>login</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'users/css/registration.css' %}">
-</head>
-<body>
-<div class="container">
-    <form method="post" novalidate>
-        {%csrf_token%}
-        <h3>login</h3>
-        {% include 'home/form.html' with form=form %}
-        <br>
-        <button type="submit" class="btn btn-primary">Submit</button>
-            Not Registered Yet?
-        <a href="{% url 'register' %}">Register Here</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="..."
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
 
-    </form>
-</div>
-</body>
+    <link rel="stylesheet" href="login.css" />
+  </head>
+  <body>
+
+    <div class="login-container">
+      <div class="col-md-6">
+        <h1 class="title mt-5">Please Login</h1>
+        <form action="">
+          <input
+            value="rahim"
+            id="login-username"
+            type="text"
+            class="input"
+            placeholder="username"
+            required
+          />
+          <input
+            id="login-password"
+            type="password"
+            class="input"
+            placeholder="password"
+            required
+            value="abcd1234%"
+          />
+          <button onclick="handleLogin(event)" class="submit-btn">Login</button>
+          <p><a href="registration.html">go to Registration page</a></p>
+        </form>
+      </div>
+      <div class="col-md-6">
+        <img class="w-100" src="./Images/reg.png" alt="" />
+      </div>
+    </div>
+
+   
+    <!-- script tag from here  -->
+    <script src="./auth.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/js/bootstrap.bundle.min.js"
+      integrity="..."
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+  </body>
 </html>
